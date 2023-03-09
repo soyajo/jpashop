@@ -19,3 +19,4 @@ public class MemberRepository {
         return em.find(Member.class, id);
     }
 }
+

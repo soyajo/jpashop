@@ -17,11 +17,11 @@ spring:
      enabled: true
 
 
-?
 logging:
   level:
     org.hibernate.SQL: debug
     # ???? ??
-    org.hibernate.type: trace
+#    org.hibernate.type: trace
+    org.hibernate.orm.jdbc.bind: trace
 
 
