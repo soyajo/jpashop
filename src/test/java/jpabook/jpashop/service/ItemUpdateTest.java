@@ -1,6 +1,6 @@
 package jpabook.jpashop.service;
 
-import jakarta.persistence.EntityManager;
+import javax.persistence.EntityManager;
 import jpabook.jpashop.domain.item.Book;
 import org.junit.Test;
 import org.junit.runner.RunWith;
