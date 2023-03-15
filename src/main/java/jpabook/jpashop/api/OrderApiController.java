@@ -37,6 +37,7 @@ public class OrderApiController {
         for (Order order : all) {
             order.getMember().getName();
             order.getDelivery().getAddress();
+
             List<OrderItem> orderItems = order.getOrderItems();
             orderItems.stream().forEach(o -> o.getItem().getName());
         }
@@ -179,4 +180,5 @@ public class OrderApiController {
             count = orderItem.getCount();
         }
     }
+
 }
