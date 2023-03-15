@@ -103,16 +103,31 @@ public class OrderApiController {
         return collect;
     }
 
+    /**
+     * 1 + N 적용
+     * @return
+     */
     @GetMapping("/api/v4/orders")
     public List<OrderQueryDto> ordersV4() {
         return orderQueryRepository.findOrderQueryDtos();
     }
 
+    /**
+     * 1 + N x
+     * 1 + 1
+     * 많이 사용함. == entity_batchSize 조절과 같다.
+     *
+     * @return
+     */
     @GetMapping("/api/v5/orders")
     public List<OrderQueryDto> ordersV5() {
         return orderQueryRepository.findAllByDto_optimization();
     }
 
+    /**
+     * query 1번으로 조회
+     * @return
+     */
     @GetMapping("/api/v6/orders")
     public List<OrderQueryDto> ordersV6() {
         List<OrderFlatDto> flats = orderQueryRepository.findAllByDto_flat();
